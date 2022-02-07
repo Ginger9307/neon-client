@@ -3,7 +3,6 @@ h1 {
     margin-bottom: 80px;
 }
 
-
 .glow {
     color: #fff;
     text-align: center;
@@ -37,7 +36,6 @@ a {
     font-size: 1.5rem;
     letter-spacing: 3px;
 }
-
 
 /* new game button  */
 .btn-ng {
@@ -83,10 +81,24 @@ a {
     background-color: rgb(255, 130, 46, 0.9);
     box-shadow: 0 0 45px rgb(255, 130, 46, 0.9);
 }
-.btn:active {
-    transform: translateY(4px);
-}
 
-a {
-    
+.btn-ng:active, .btn-a:active, .btn-lb:active, .btn-jg:active {
+    transform: scale(98%);
+
+}
+.btn-ng:active  {
+    border: 2px solid rgba(49, 220, 15, 1);
+    background-color: rgba(49, 220, 15, 0.9);
+}
+.btn-a:active {
+    border: 2px solid rgb(205, 105, 38);
+    background-color: rgba(205, 105, 38, 0.9);
+}
+.btn-lb:active {
+    border: 2px solid rgb(140, 89, 185);
+    background-color: rgba(140, 89, 185, 0.9);
+}
+.btn-jg:active {
+    border: 2px solid rgb(211, 201, 4);
+    background-color: rgba(211, 201, 4, 0.9);
 }
