@@ -1,0 +1,43 @@
+/* @font-face { font-family: Lavender; src: url('../public/assets/LavenderRainstorm-pPg1.ttf'); */
+
+@font-face {
+    font-family: 'HELLODENVERDISPLAYREGULARRg';
+    src: url('./style/fonts/hello-denver-display/hellodenverdisplayregular_v1.6.eot');
+    src: url('./style/fonts/hello-denver-display/hellodenverdisplayregular_v1.6.eot?#iefix') format('embedded-opentype'),
+         url('./style/fonts/hello-denver-display/hellodenverdisplayregular_v1.6.woff') format('woff'),
+         url('./style/fonts/hello-denver-display/hellodenverdisplayregular_v1.6.ttf') format('truetype'),
+         url('./style/fonts/hello-denver-display/hellodenverdisplayregular_v1.6.svg#HELLODENVERDISPLAYREGULARRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
+
+
+html {
+  background: url(./style/blueBrickedWall.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  color: azure;
+  font-family: 'HELLODENVERDISPLAYREGULARRg';
+  font-size: 96px;
+  letter-spacing: 25px;
+}
+
+button {
+  /* background-color: transparent !important; */
+  border: 3px solid azure;
+  color: azure;
+  padding: 5px 15px 5px 15px;
+}
+
+a {
+  color: azure;
+  text-decoration: none;
+  font-family: 'Moul', cursive;
+}

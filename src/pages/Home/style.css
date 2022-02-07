@@ -1,0 +1,92 @@
+h1 {
+    margin-top: 150px;
+    margin-bottom: 80px;
+}
+
+
+.glow {
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+@keyframes glow {
+    from {
+      /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073; */
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00F5FB, 0 0 40px #00F5FB, 0 0 50px #00F5FB, 0 0 60px #00F5FB, 0 0 70px #00F5FB;  
+    }
+    
+    to {
+      /* text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; */
+      text-shadow: 0 0 20px #fff, 0 0 30px #0492C2, 0 0 40px #0492C2, 0 0 50px #0492C2,0 0 60px #0492C2, 0 0 70px #0492C2, 0 0 80px #0492C2;
+    }
+  }
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    height: 70vh;
+}
+
+a {
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+
+/* new game button  */
+.btn-ng {
+    border: 2px solid #38FF12;
+    background-color: rgb(56, 255, 18, 0.5);
+    box-shadow: 0 0 25px rgb(56, 255, 18, 0.9);
+}
+.btn-ng:hover {
+    border: 2px solid #38FF12;
+    background-color: rgb(56, 255, 18, 0.9);
+    box-shadow: 0 0 45px rgb(56, 255, 18, 0.9);
+}
+/*  join game button */
+.btn-jg {
+    border: 2px solid #FFF100;
+    background-color: rgb(255, 241, 0, 0.5);
+    box-shadow: 0 0 25px rgb(255, 241, 0, 0.9);
+}
+.btn-jg:hover {
+    border: 2px solid #FFF100;
+    background-color: rgb(255, 241, 0, 0.9);
+    box-shadow: 0 0 45px rgb(255, 241, 0, 0.9);
+}
+/* leadeboard button */
+.btn-lb {
+    border: 2px solid  #BC75F9;
+    background-color: rgb(188, 117, 249, 0.5);
+    box-shadow: 0 0 25px rgb(188, 117, 249, 0.9);
+}
+.btn-lb:hover {
+    border: 2px solid #BC75F9;
+    background-color: rgb(188, 117, 249, 0.9);
+    box-shadow: 0 0 45px rgb(188, 117, 249, 0.9);
+}
+/* about button */
+.btn-a {
+    border: 2px solid #FF822E;
+    background-color: rgb(255, 130, 46, 0.5);
+    box-shadow: 0 0 25px rgb(255, 130, 46, 0.9);
+}
+.btn-a:hover {
+    border: 2px solid #FF822E;
+    background-color: rgb(255, 130, 46, 0.9);
+    box-shadow: 0 0 45px rgb(255, 130, 46, 0.9);
+}
+.btn:active {
+    transform: translateY(4px);
+}
+
+a {
+    
+}
