@@ -1,13 +1,12 @@
 import React from 'react';
+import { Nav2 } from '../../components';
 
 const About = () => {
   return (
     <div>
-        <h1>ABOUT</h1>
+        <h1 className='glow'>ABOUT</h1>
         <h3> about info</h3>
-        <button> 
-            <a href='/menu'>back</a> 
-        </button>
+        <Nav2 link={'/menu'} />
     </div>);
 };
 

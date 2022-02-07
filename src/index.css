@@ -29,15 +29,16 @@ h1 {
   letter-spacing: 25px;
 }
 
-button {
+/* button { */
   /* background-color: transparent !important; */
-  border: 3px solid azure;
+  /* border: 3px solid azure;
   color: azure;
   padding: 5px 15px 5px 15px;
-}
+} */
 
 a {
   color: azure;
   text-decoration: none;
   font-family: 'Moul', cursive;
 }
+

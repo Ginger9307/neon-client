@@ -3,7 +3,7 @@ import React from 'react';
 const Players = () => {
   return (
     <div>
-      <h1> PLAYERS </h1>
+      <h1 className='glow'> PLAYERS </h1>
     </div>);
 };
 

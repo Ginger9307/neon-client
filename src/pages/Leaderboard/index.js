@@ -1,14 +1,12 @@
 import React from 'react';
-import { ScoreTable } from '../../components';
+import { Nav2, ScoreTable } from '../../components';
 
 const Leaderboard = () => {
   return (
     <div>
-        <h1> LEADERBOARD</h1>
+        <h1 className='glow'> LEADERBOARD</h1>
         <ScoreTable/>
-        <button> 
-            <a href='/menu'>back</a> 
-        </button>
+        <Nav2 link={'/menu'} />
     </div>);
 };
 
