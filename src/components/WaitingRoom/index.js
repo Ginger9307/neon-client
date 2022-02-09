@@ -32,9 +32,9 @@ const WaitingRoom = () => {
   
   return (
     <div>
-        <h2> Waiting for others player(s)</h2>
+        <h2> Waiting for others players to join the game </h2>
         <a href='/menu'className='btn-nav'>{'<< '}back </a> 
-        <a onClick={handleNext} className='btn-nav'>next {' >>'} </a> 
+        <a onClick={handleNext} className='btn-nav'>start {' >>'} </a> 
 
     </div>);
 };
