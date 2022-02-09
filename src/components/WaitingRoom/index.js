@@ -30,14 +30,12 @@ const WaitingRoom = () => {
     });
   }, [socket]);
 
-  const renderPlayers = () => newPlayers.map(newPlayer => <li>{newPlayer}</li>)
+  const renderPlayers = () => newPlayers.map(newPlayer => <h3>{newPlayer}</h3>)
   
   return (
     <div>
         <h2> Waiting for others players to join the game </h2>
-        <ul>
-          {renderPlayers()}
-        </ul>
+        {renderPlayers()}
         <a href='/menu'className='btn-nav'>{'<< '}back </a> 
         <a onClick={handleNext} className='btn-nav'>start {' >>'} </a> 
 

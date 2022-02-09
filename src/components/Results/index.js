@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useSocket } from '../../contexts/SocketProvider';
 
@@ -17,11 +17,12 @@ const Results = () => {
     console.log(playerScores)
   }, [playerScores]);
 
+  const renderPlayers = () => playerScores.map(playerScore => <h3>{playerScore.player} scored:{playerScore.score}</h3>)
+
   return (
     <div>
         <h2> YOUR SCORE:  {score}</h2>
-        <h3> SWITCH FOR WAITING ALL RESULTS</h3>
-
+        {renderPlayers()}
         <div className='nav'>
             <a href={'/menu'} className='btn-nav'>menu </a> 
             {/* <a href={'leaderboard'} className='btn-nav'>leaderboard {' >>'} </a>  */}
