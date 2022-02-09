@@ -42,7 +42,7 @@ export const createGame = (room, amount, category, difficulty, name) => {
 };
 
 
-// post score to server 
+// save player's score  
 export const saveScore = (score) => {
     console.log("post score", score)
     return async (dispatch) => {
@@ -68,6 +68,7 @@ const fetchQuestions = async (amount, category, difficulty) => {
     }
 };
 
+// post score data
 const postScore = async (score) => {
     await console.log(score);
 }
