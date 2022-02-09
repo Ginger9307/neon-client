@@ -31,6 +31,10 @@ const gameReducer = (state=initState, action) => {
             console.log('answer', newIndex, state.score, action.payload, finish)
             return { ...state, score: newScore, index: newIndex, finishQuiz: finish };
         }
+        case 'LOAD_SETTINGS': {
+            console.log('load set', action.payload)
+            return { ...state, numQ: action.payload.qnum, difficulty: action.payload.diff };
+        }
         case 'SET_ERROR':
             return { ...state, error: action.payload, loading: false };
         

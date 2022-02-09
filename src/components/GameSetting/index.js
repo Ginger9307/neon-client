@@ -49,7 +49,7 @@ const GameSetting = () => {
   setRoomInput(value);
 }
 // state hook for name input
-const [nameInput, setNameInput] = useState('1');
+const [nameInput, setNameInput] = useState('player1');
 // handle name input
  const handleNameInput = (e) => {
   const value = e.target.value;
@@ -64,7 +64,7 @@ const [nameInput, setNameInput] = useState('1');
     setDifficultyInput('easy');
     setCategoryInput('9');
     setRoomInput('room');
-    setNameInput('player');
+    setNameInput('player1');
   }
 
   const handleSubmit = () => {
