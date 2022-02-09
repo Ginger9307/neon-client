@@ -6,7 +6,7 @@ const JoinGame = () => {
     <div>
         <h1 className='glow'> JOIN GAME</h1>
         <RoomDetail />
-        <Nav1 links={['/menu', '/players']} /> 
+        {/* <Nav1 links={['/menu', '/players']} />  */}
     </div>);
 };
 
