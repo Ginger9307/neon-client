@@ -85,11 +85,11 @@ const [nameInput, setNameInput] = useState('1');
             <label>Easy</label>
           </p>
           <p>
-            <input class="" type="radio" name="level" value="medium" checked={difficultyInput === 'medium'} onChange={handleDifficultyInput} />
+            <input className="" type="radio" name="level" value="medium" checked={difficultyInput === 'medium'} onChange={handleDifficultyInput} />
             <label>Medium</label>
           </p>
           <p>
-            <input class="" type="radio" name="gender" value="hard" checked={difficultyInput === 'hard'} onChange={handleDifficultyInput} />
+            <input className="" type="radio" name="gender" value="hard" checked={difficultyInput === 'hard'} onChange={handleDifficultyInput} />
             <label>Hard</label>
           </p>
         
