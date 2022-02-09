@@ -14,6 +14,12 @@ const initState = {
     playerScores: []
 };
 
+// shuffling array function 
+const getShuffled = arr => {
+    if (arr.length === 1) {return arr};
+    const rand = Math.floor(Math.random() * arr.length);
+    return [arr[rand], ...getShuffled(arr.filter((_, i) => i != rand))];
+};
 
 const gameReducer = (state=initState, action) => {
     switch(action.type) {
@@ -22,8 +28,20 @@ const gameReducer = (state=initState, action) => {
             return {...state, room: action.payload.room, amount: action.payload.amount, category: action.payload.category, difficulty: action.payload.difficulty, player: action.payload.name, numQ: action.payload.NUMQ, admin: true};
         }
         case 'LOAD_QUESTIONS': {
-            console.log(state);
-            return { ...state, questions: action.payload, loading: true };
+            console.log("state",state);
+            console.log("payload",action.payload)
+            // create new key with all answers which shuffled
+            const newQuestions = action.payload.map(a => {
+                console.log("a", a)
+                const answers = getShuffled([
+                                    ...a.incorrect_answers,
+                                    a.correct_answer,
+                                ]);
+                a["answers"] = answers;
+                return a;
+            });
+            console.log(newQuestions);
+            return { ...state, questions: newQuestions, loading: true };
         }
         case 'RECORD_ANSWER': {
             const newIndex = state.index + 1;

@@ -1,31 +1,31 @@
 import React, { useEffect, useState } from 'react';
+import { recordAnswer } from '../../actions';
+import { useDispatch } from 'react-redux';
 
-const Timer = ({initSec, index}) => {
-  
+const Timer = ({ init, index, handleZero }) => {
+    const dispatch = useDispatch;
+    const [seconds, setSeconds ] =  useState(init);
    
-   
-  const [seconds, setSeconds ] =  useState(initSec);
-   
-   useEffect(() => {
-     let myInterval = setInterval(() => {
-       if (seconds > 0) {
-           setSeconds(seconds - 1);
-       }
-     }, 1000)
-     return () => clearInterval(myInterval);
+    useEffect(() => {
+        let myInterval = setInterval(() => {
+        if (seconds > 0) {
+            setSeconds(seconds - 1);
+        }
+        }, 1000)
+        return () => clearInterval(myInterval);
    });
-   console.log(index)
 
    useEffect(() => {
-    setSeconds(initSec);
-  }, [index]);
+        setSeconds(init);
+    }, [index]);
     
-  return (
-    <div>
-        <div className='countdown-timer'>
-            {seconds}
-        </div>        
-    </div>);
+
+    return (
+        <div>
+            <div className='countdown-timer'>
+                {seconds}
+            </div>        
+        </div>);
 };
 
 export default Timer;

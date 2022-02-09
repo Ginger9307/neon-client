@@ -2,21 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { recordAnswer, saveScore } from '../../actions';
-import Timer from '../Timer';
 import './style.css';
 
-const getShuffled = arr => {
-    if (arr.length === 1) {return arr};
-    const rand = Math.floor(Math.random() * arr.length);
-    return [arr[rand], ...getShuffled(arr.filter((_, i) => i != rand))];
-};
-
+// decoding function (for some symbols in questiond & answers)
 function decode(s) {
     var el = document.createElement("div");
     el.innerHTML = s;
     return el.innerText || el.textContent;
 }
+// 
+const initTimer = 15;
 
+// Question COMPONENT
 const Question = () => {
     const dispatch = useDispatch();
     const history = useHistory();
@@ -27,41 +24,72 @@ const Question = () => {
     const score = useSelector(state => state.score);
     const question = set.question;
     const cAnswer = set.correct_answer;
-    const answers = getShuffled([
-            ...set.incorrect_answers,
-            set.correct_answer,
-        ]);
-    //   // set timer hook   
-    const [timer, setTimer] = useState(15);
+    const answers = set.answers
 
-
+    const callNextQuestion = (curScore) => {
+        dispatch(recordAnswer(curScore));
+        setTimer(initTimer);
+        if (index === numQ-1) {
+            console.log(score+curScore);  
+            dispatch(saveScore(score+curScore));
+            history.push('/results');
+        };
+    }
+    // handle answer function 
     const handleAnswerSelect = (answer) => {
-    console.log(answer);
-    const curScore = (answer === cAnswer)? 1: 0;
-    console.log(curScore);
-    dispatch(recordAnswer(curScore));
-    setTimer(15);
-    if (index === numQ-1) {
-        console.log(score+curScore);  
-        dispatch(saveScore(score+curScore));
-        history.push('/results');
+        console.log(answer);
+        const curScore = (answer === cAnswer)? 1: 0;
+        callNextQuestion(curScore);
     };
-  };
 
-  return (
-    <div>
-        <h2> Question {index+1} / {numQ}</h2>
-            <h3> {decode(question)} </h3>
-               <Timer initSec={timer} index={index}/> 
-            {
-                answers.map(a => (
-                <button key={a} onClick={() => handleAnswerSelect(a)}>
-                    {decode(a)}
-                </button>
-                ))
-            } 
-        <h3> {score} </h3> 
-    </div>);
-};
+    // handle timer reach zero
+    const handleZero = () => {
+        const curScore = 0;
+        callNextQuestion(curScore);
+    }
+
+    // work out timer 
+    const [timer, setTimer] = useState(initTimer);
+    const [seconds, setSeconds ] =  useState(timer);
+   
+    useEffect(() => {
+        let myInterval = setInterval(() => {
+        if (seconds > 0) {
+            setSeconds(seconds - 1);
+        }
+        }, 1000)
+        return () => clearInterval(myInterval);
+    });
+
+    useEffect(() => {
+        setSeconds(timer);
+    }, [index]);
+    
+    useEffect(() => {
+        if (seconds === 0) {
+           console.log('zero!')
+           handleZero();
+        };
+    }, [seconds]);
+
+    // HTML
+    return (
+        <div>
+            <h2> Question {index+1} / {numQ}</h2>
+                <h3> {decode(question)} </h3>
+                {/* <Timer init={timer} index={index} />  */}
+                <div className='countdown-timer'>
+                    {seconds}
+                </div>  
+                {
+                    answers.map(a => (
+                    <button key={a} onClick={() => handleAnswerSelect(a)}>
+                        {decode(a)}
+                    </button>
+                    ))
+                } 
+            <h3> {score} </h3> 
+        </div>);
+    };
 
 export default Question;
