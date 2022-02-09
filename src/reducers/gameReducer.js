@@ -10,7 +10,8 @@ const initState = {
     score: 0, 
     finishQuiz: false,
     loading: false,
-    admin: false 
+    admin: false,
+    playerScores: []
 };
 
 
@@ -34,6 +35,12 @@ const gameReducer = (state=initState, action) => {
         case 'LOAD_SETTINGS': {
             console.log('load set', action.payload)
             return { ...state, numQ: action.payload.qnum, difficulty: action.payload.diff };
+        }
+        case 'LOAD_PLAYER': {
+            return { ...state, room: action.payload.room, player: action.payload.name };
+        }
+        case 'RECORD_PLAYER_RESULT': {
+            return { ...state, playerScores: [...state.playerScores, { player: action.payload.playerName, score: action.payload.score }] };
         }
         case 'SET_ERROR':
             return { ...state, error: action.payload, loading: false };
