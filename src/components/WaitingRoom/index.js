@@ -10,10 +10,12 @@ const WaitingRoom = () => {
   const socket = useSocket();
   const room = useSelector(state => state.room);
   const player = useSelector(state => state.player);
+  const difficulty = useSelector(state => state.difficulty);
+  const numQ = useSelector(state => state.numQ);
   const questions = useSelector(state => state.questions);
 
   const handleNext = (() => {
-    socket.emit('start-game', room, questions);
+    socket.emit('start-game', room, difficulty, numQ, questions);
     history.push('/game');
   })
 
