@@ -6,3 +6,4 @@ export { default as Players } from './Players';
 export { default as Game } from './Game';
 export { default as About } from './About';
 export { default as Leaderboard } from './Leaderboard';
+export { default as GameOver } from './GameOver';

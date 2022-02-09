@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import {  Route, Switch } from "react-router-dom";
-import { About, Game, Home, JoinGame, Leaderboard, NewGame, Players } from './pages';
+import { About, Game, GameOver, Home, JoinGame, Leaderboard, NewGame, Players } from './pages';
 import Intro from './pages/Intro';
 
 
@@ -18,7 +18,8 @@ function App() {
               <Route path="/create" component={NewGame} />
               <Route path="/players" component={Players} />
               <Route path="/join" component={JoinGame} />
-              <Route path="/game/:code" component={Game} />
+              <Route path="/game" component={Game} /> 
+              <Route path="/results" component={GameOver} /> 
               <Route path="/leaderboard" component={Leaderboard} />
               <Route path="/about" component={About} />
               {/* <Route component={NotFound} /> */}

@@ -3,6 +3,6 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import gameReducer from './reducers/gameReducer';
 
-// const store = createStore(gameReducer, composeWithDevTools(applyMiddleware(thunk)));
+const store = createStore(gameReducer, composeWithDevTools(applyMiddleware(thunk)));
 
-// export default store;
+export default store;
