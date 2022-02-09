@@ -1,13 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router';
+import { useSelector } from 'react-redux';
+import { useSocket } from '../../contexts/SocketProvider';
 
 
 const WaitingRoom = () => {
 
   const history = useHistory(); 
+  const socket = useSocket();
+  const room = useSelector(state => state.room);
+  const player = useSelector(state => state.player);
+  const questions = useSelector(state => state.questions);
 
-  const handleNext = () =>
-    history.push('/game')
+  const handleNext = (() => {
+    socket.emit('start-game', room, questions);
+    history.push('/game');
+  })
+
+  useEffect(() => {
+    socket.emit('join-room', room, player);
+  }, []);
+
+  useEffect(() => {
+    socket.on('user-join', playerName => {
+      //write function to add names to list
+      console.log(playerName)
+    });
+  }, [socket]);
   
   return (
     <div>
