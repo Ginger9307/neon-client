@@ -15,10 +15,26 @@ export const loadQuestions = (questions) => ({
     payload: questions
 });
 
+// load qnum
+export const loadSettings = (diff,qnum) => ({ 
+    type: 'LOAD_SETTINGS',
+    payload: { diff, qnum }
+});
+
+export const loadPlayer = (room,name) => ({ 
+    type: 'LOAD_PLAYER',
+    payload: { room, name }
+});
+
 // update score & increase index
 export const recordAnswer = (curScore) => ({
     type: 'RECORD_ANSWER',
     payload: curScore
+});
+
+export const recordPlayerResult = (playerName, score) => ({
+    type: 'RECORD_PLAYER_RESULT',
+    payload: { playerName, score }
 });
 
 

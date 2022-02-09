@@ -1,0 +1,14 @@
+.fixH1 {
+    font-family: 'HELLODENVERDISPLAYREGULARRg';
+    font-size: 96px;
+    letter-spacing: 25px;
+    margin-top: 150px;
+    margin-bottom: 80px;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}

@@ -49,7 +49,7 @@ const GameSetting = () => {
   setRoomInput(value);
 }
 // state hook for name input
-const [nameInput, setNameInput] = useState('1');
+const [nameInput, setNameInput] = useState('player1');
 // handle name input
  const handleNameInput = (e) => {
   const value = e.target.value;
@@ -64,7 +64,7 @@ const [nameInput, setNameInput] = useState('1');
     setDifficultyInput('easy');
     setCategoryInput('9');
     setRoomInput('room');
-    setNameInput('player');
+    setNameInput('player1');
   }
 
   const handleSubmit = () => {
@@ -85,11 +85,11 @@ const [nameInput, setNameInput] = useState('1');
             <label>Easy</label>
           </p>
           <p>
-            <input class="" type="radio" name="level" value="medium" checked={difficultyInput === 'medium'} onChange={handleDifficultyInput} />
+            <input className="" type="radio" name="level" value="medium" checked={difficultyInput === 'medium'} onChange={handleDifficultyInput} />
             <label>Medium</label>
           </p>
           <p>
-            <input class="" type="radio" name="gender" value="hard" checked={difficultyInput === 'hard'} onChange={handleDifficultyInput} />
+            <input className="" type="radio" name="gender" value="hard" checked={difficultyInput === 'hard'} onChange={handleDifficultyInput} />
             <label>Hard</label>
           </p>
         
