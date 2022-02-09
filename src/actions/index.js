@@ -43,11 +43,11 @@ export const createGame = (room, amount, category, difficulty, name) => {
 
 
 // post score to server 
-export const saveScore = (score) => {
+export const saveScore = (score, player) => {
     console.log("post score", score)
     return async (dispatch) => {
         try {
-            await postScore(score);
+            await postScore(score, player);
         } catch (err) {
             console.warn(err.message);
         }
@@ -68,6 +68,19 @@ const fetchQuestions = async (amount, category, difficulty) => {
     }
 };
 
-const postScore = async (score) => {
+const postScore = async (score, player) => {
+
+    await fetch (`http://localhost:8080/players`, {
+        method: 'POST',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({username: player})
+    })
+
+   await fetch (`http://localhost:8080/players/${player}`, {
+        method: 'PATCH',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({score: score})
+    })
+
     await console.log(score);
 }
