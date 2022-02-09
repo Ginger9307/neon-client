@@ -9,7 +9,8 @@ const initState = {
     questions: [],
     score: 0, 
     finishQuiz: false,
-    loading: false 
+    loading: false,
+    admin: false 
 };
 
 
@@ -17,7 +18,7 @@ const gameReducer = (state=initState, action) => {
     switch(action.type) {
         case 'SETTING': {
             console.log(action.payload)
-            return {...state, room: action.payload.room, amount: action.payload.amount, category: action.payload.category, difficulty: action.payload.difficulty, player: action.payload.name, numQ: action.payload.NUMQ};
+            return {...state, room: action.payload.room, amount: action.payload.amount, category: action.payload.category, difficulty: action.payload.difficulty, player: action.payload.name, numQ: action.payload.NUMQ, admin: true};
         }
         case 'LOAD_QUESTIONS': {
             console.log(state);

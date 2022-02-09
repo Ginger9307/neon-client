@@ -24,7 +24,7 @@ const RoomDetail = () => {
 const handleSubmit = () => {
     console.log(roomInput, nameInput);
     // dispatch(createGame(roomInput, numPlInput, Number(categoryInput), difficultyInput, nameInput));
-    history.push('/game')
+    history.push('/players')
   }
 
   return (
