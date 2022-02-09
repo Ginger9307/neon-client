@@ -1,9 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom'
+import { useSocket } from '../../contexts/SocketProvider';
 
 const RoomDetail = () => {
   const history = useHistory();
+  const socket = useSocket();
   // state hook for room input
   const [roomInput, setRoomInput] = useState('1');
  // handle room input
@@ -23,6 +25,7 @@ const RoomDetail = () => {
 
 const handleSubmit = () => {
     console.log(roomInput, nameInput);
+    socket.emit('join-room', roomInput, nameInput);
     // dispatch(createGame(roomInput, numPlInput, Number(categoryInput), difficultyInput, nameInput));
     history.push('/game')
   }
