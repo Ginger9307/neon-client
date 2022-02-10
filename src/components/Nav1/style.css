@@ -1,23 +1,37 @@
 .nav {
-    margin-top: 2rem;
+    margin-top: 85px;
 }
 .btn-nav {
-    width: 150px;
+    width: 140px;
     margin: 0 auto;
     border-radius: 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 3px;
-    padding-left: 15px;
-    padding-right: 15px;
+    /* padding-left: 15px;
+    padding-right: 15px; */
     border: 2px solid #fff;
     box-shadow: 0 0 25px rgba(248, 249, 247, 0.8);
+    color: azure;
+    padding-top: 12px;
 }
 
 .btn-nav:hover {
     box-shadow: 0 0 50px rgba(248, 249, 247, 0.8);
     background-color: rgb(248, 249, 247, 0.1);
+    cursor: pointer;
 }
 
 .btn-nav:active {
     transform: scale(97%);
+}
+
+.btn-nav-l {
+    margin-left: 0;
+    text-align: left;
+    padding-left: 15px
+}
+.btn-nav-r {
+    margin-right: 0;
+    text-align: right;
+    padding-right: 15px;
 }

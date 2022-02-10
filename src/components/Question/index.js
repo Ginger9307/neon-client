@@ -11,7 +11,7 @@ function decode(s) {
     return el.innerText || el.textContent;
 }
 // 
-const initTimer = 15;
+const initTimer = 1500;
 
 // Question COMPONENT
 const Question = () => {

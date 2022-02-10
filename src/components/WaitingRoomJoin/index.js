@@ -21,11 +21,13 @@ const WaitingRoomJoin = () => {
   }, [socket]);
   
   return (
-    <div>
-        <h2> Waiting for Admin to start the game </h2>
-        <a href='/menu'className='btn-nav'>{'<< '}menu </a> 
-        {/* <a onClick={handleNext} className='btn-nav'>start {' >>'} </a>  */}
+    <div id='waiting-room'>
+        <h2> Waiting for Admin to start the game <span className='blink'>...</span></h2>
 
+        <div className='nav'>
+          <a href='/menu'className='btn-nav'>{'<< '}menu </a> 
+          {/* <a onClick={handleNext} className='btn-nav'>start {' >>'} </a>  */}
+        </div>
     </div>);
 };
 

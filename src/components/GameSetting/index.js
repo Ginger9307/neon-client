@@ -4,25 +4,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createGame } from '../../actions';
 import { useHistory } from 'react-router-dom';
 import './style.css';
-import { styled } from '@mui/material/styles';
-// import Box from '@mui/material/Box';
-// import Paper from '@mui/material/Paper';
-// import Grid from '@mui/material/Grid';
 import { Container, Row, Col } from "reactstrap";
 
-// const Item = styled(Paper)(({ theme }) => ({
-//   ...theme.typography.body2,
-//   padding: theme.spacing(1),
-//   textAlign: 'center',
-//   color: theme.palette.text.secondary,
-// }));
 
 const GameSetting = () => { 
-  // selector hook for all todos data in the store
-  // const list = useSelector(list => list.all);
-  // console.log(list)
   // dispatch hook for data in the store
   const dispatch = useDispatch();
+  // hustory hook to navigate
   const history = useHistory();
 
   // state hook for number of players input 
@@ -53,7 +41,7 @@ const GameSetting = () => {
  }
 
  // state hook for room input
- const [roomInput, setRoomInput] = useState('game');
+ const [roomInput, setRoomInput] = useState('neon');
  // handle room input
  const handleRoomInput = (e) => {
   const value = e.target.value;
@@ -61,7 +49,7 @@ const GameSetting = () => {
   setRoomInput(value);
 }
 // state hook for name input
-const [nameInput, setNameInput] = useState('Player-1');
+const [nameInput, setNameInput] = useState('Player1');
 // handle name input
  const handleNameInput = (e) => {
   const value = e.target.value;
@@ -71,12 +59,11 @@ const [nameInput, setNameInput] = useState('Player-1');
 
   // clear all inputs after button click
   const handleClickClear = () => {
-  // setTextInput('');
     setNumPlInput('1');
     setDifficultyInput('easy');
     setCategoryInput('9');
-    setRoomInput('game');
-    setNameInput('Player-1');
+    setRoomInput('neon');
+    setNameInput('Player1');
   }
 
   const handleSubmit = () => {
@@ -86,16 +73,15 @@ const [nameInput, setNameInput] = useState('Player-1');
   }
 
   return (
-    <div className='settings'>
-      <form onSubmit={() => {handleSubmit(); handleClickClear()}}>
-      {/* <Box sx={{ flexGrow: 1 }}> */}
+    <div id="new-game">
+      <div className='settings'>
       <Container>
 
-        <Row className='numP-frame d-flex justify-content-center'  >
-          <Col xs='10' className=''>
+        <Row className='numP-frame d-flex justify-content-center'>
+          <Col xs='9' className=''>
             <label>Number of Players</label>
           </Col>  
-          <Col xs='2' className='d-flex justify-content-end'>
+          <Col xs='3' className='d-flex justify-content-end'>
             <input className='inp-num' type='number' min ='1' max='4' value={numPlInput} onChange={handleNumPlInput} required/>
           </Col>
         </Row>
@@ -108,17 +94,17 @@ const [nameInput, setNameInput] = useState('Player-1');
 
           <Col xs="auto" >
               <input className="radio" type="radio" name="level" value={"easy"} checked={difficultyInput === 'easy'} onChange={handleDifficultyInput} / >
-              <label>Easy</label>
+              <span>Easy</span>
           </Col>
 
           <Col xs='auto'>
               <input className="radio" type="radio" name="level" value="medium" checked={difficultyInput === 'medium'} onChange={handleDifficultyInput} />
-              <label>Medium</label>
+              <span>Medium</span>
           </Col>
 
           <Col xs='auto' >
               <input  type="radio" name="gender" value="hard" checked={difficultyInput === 'hard'} onChange={handleDifficultyInput} />
-              <label >Hard</label>
+              <span>Hard</span>
           </Col>
 
         </Row>
@@ -159,28 +145,30 @@ const [nameInput, setNameInput] = useState('Player-1');
 
         <Row className='room-frame'>
           <Col xs='5'>
-            <p>Game Name</p>
+            <label>Game</label>
           </Col>
-
           <Col xs='7' >
-            <input className='inp-game' type='text' maxlength='20' value={roomInput} onChange={handleRoomInput} required/>
+            <input className='inp-game d-flex justify-content-end' type='text' maxLength='20' value={roomInput} onChange={handleRoomInput} required/>
           </Col>
         </Row>
+
         <Row className='player-frame'>
           <Col xs='5'>
-            <p>Player name</p>
+            <label>Player</label>
           </Col>
           <Col xs='7' >
-            <input className='inp-player' type='text' maxlength='20' value={nameInput} onChange={handleNameInput} required/>
+            <input className='inp-player d-flex justify-content-end' type='text' maxLength='20' value={nameInput} onChange={handleNameInput} required/>
           </Col >
         </Row>
+
       </Container>
-      </form>
+      </div>
 
       <div className='nav'>
-        <a href='/menu' className='btn-nav'>{'<< '}back </a> 
-        <a onClick={handleSubmit} className='btn-nav'>next {' >>'}  </a> 
+        <a href='/menu' className='btn-nav btn-nav-l'>{'<< '}menu </a> 
+        <a onClick={handleSubmit} className='btn-nav btn-nav-r'>next {' >>'}  </a> 
       </div>
+
     </div>);
     
 };

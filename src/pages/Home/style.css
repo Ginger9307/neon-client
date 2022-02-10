@@ -35,6 +35,10 @@ a {
     border-radius: 20px;
     font-size: 1.5rem;
     letter-spacing: 3px;
+    height: 55px;
+    /* align-items: center; */
+    padding-top: 9px;
+    padding-bottom: auto;
 }
 
 /* new game button  */
