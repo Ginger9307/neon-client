@@ -14,7 +14,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
 
 
-html {
+body {
   background: url(./style/blueBrickedWall.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -25,8 +25,9 @@ html {
 h1 {
   color: azure;
   font-family: 'HELLODENVERDISPLAYREGULARRg';
-  font-size: 96px;
+  font-size: 96px !important;
   letter-spacing: 25px;
+  /* margin-top: 120px !important; */
 }
 
 /* button { */
@@ -37,8 +38,9 @@ h1 {
 } */
 
 a {
-  color: azure;
-  text-decoration: none;
-  font-family: 'Moul', cursive;
+  color: azure !important;
+  text-decoration: none !important;
+  font-family: 'Moul', cursive !important;
+  text-align: center;
 }
 

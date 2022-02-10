@@ -1,4 +1,72 @@
 .settings {
     color: azure;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    font-size: 1.2rem;
+    font-family: 'Moul', cursive !important;
+}
+.settings .row {
+    margin-bottom: 20px;
+    padding: 10px
+}
+
+.diff-frame {
+    border: 2px solid #38ff12;
+    box-shadow: 0 0 25px rgb(56, 255, 18, 0.9);
+    border-radius: 25px;
+}
+.radio {
+    margin-right: 2px;
+}
+
+.numP-frame {
+    border: 2px solid #FFF100;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgb(255, 241, 0, 0.9);
+    justify-content: space-between;
+}
+.inp-num {
+    border-radius: 5px;
+    background:azure;
+    /* border: 2px solid #FFF100; */
+}
+
+.categ-frame {
+    border: 2px solid #ff00e3;
+    box-shadow: 0 0 25px rgb(255, 0, 227, 0.9);
+    border-radius: 25px;
+}
+
+.select-cat {
+    width: 320px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background:azure;
+}
+
+.inp-game {
+    width: 250px;
+    height: 35px;
+    /* font-size: 1.5rem; */
+    border-radius: 5px;
+    background:azure;
+    padding: 0;
     
+}
+
+.room-frame {
+    border: 2px solid #bc75f9;
+    box-shadow: 0 0 25px rgb(188, 117, 249, 0.9);
+    border-radius: 25px;
+}
+
+.player-frame {
+    border: 2px solid rgb(205, 105, 38);
+    box-shadow: 0 0 25px rgb(205, 105, 38, 0.9);
+    border-radius: 25px;
+}
+
+.inp-player {
+    padding: 0
 }

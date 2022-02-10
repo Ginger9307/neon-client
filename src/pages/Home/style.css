@@ -1,6 +1,6 @@
 h1 {
-    margin-top: 150px;
-    margin-bottom: 80px;
+    margin-top: 150px !important;
+    margin-bottom: 80px !important;
 }
 
 .glow {

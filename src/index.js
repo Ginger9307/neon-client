@@ -6,6 +6,7 @@ import { SocketProvider } from './contexts/SocketProvider';
 import store from './store';
 import App from './App';
 import './index.css';
+import "bootstrap/dist/css/bootstrap.css";
 
 
 ReactDOM.render(
