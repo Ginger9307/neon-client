@@ -141,7 +141,7 @@ const Question = () => {
                 <div className='nav'>
                     <a href={'/main'} className='btn-nav btn-nav-l'>{'<< '}menu </a> 
                     <label className='cur-score'>  SCORE: {score} </label>
-                </div>);
+                </div>
         </div>
 
         </div>);
