@@ -15,7 +15,7 @@ function decode(s) {
     return el.innerText || el.textContent;
 }
 // 
-const initTimer = 1500;
+const initTimer = 15;
 // const btnColors = ['btn-a-g', 'btn-a-p', 'btn-a-y', 'btn-a-o']
 
 const playWrong = () => {

@@ -6,7 +6,6 @@ const Leaderboard = () => {
     <div>
         <h1 className='glow'> LEADERBOARD</h1>
         <ScoreTable/>
-        <Nav2 link={'/menu'} />
     </div>);
 };
 
