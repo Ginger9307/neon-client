@@ -17,7 +17,7 @@ const Home = () => {
 
             <a href='/about' className='btn-a' id=''>ABOUT {' >>'} </a>
 
-        </div>); 
+        </div> 
     </div>);
 };
 
