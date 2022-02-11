@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { useDispatch } from 'react-redux';
 import { useSocket } from '../../contexts/SocketProvider';
-import { loadQuestions, loadSettings } from '../../actions';
+import { loadQuestions, loadSettings, loadGameMode } from '../../actions';
 
 
 const WaitingRoomJoin = () => {
@@ -16,6 +16,7 @@ const WaitingRoomJoin = () => {
       dispatch(loadQuestions(quiz));
       console.log(diff, qnum);
       dispatch(loadSettings(diff, qnum));
+      dispatch(loadGameMode());
       history.push('/game');
     });
   }, [socket]);

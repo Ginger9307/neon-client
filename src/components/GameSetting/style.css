@@ -20,13 +20,14 @@
     padding: 10px;
     align-items: center;
     height: 55px;
-    /* font-family: 'Ubuntu', sans-serif; */
     font-family: 'Bubblegum Sans', cursive;
 }
 
 .settings input, select {
     border-radius: 5px;
-    border: 1px solid azure;
+    /* border: 1px solid azure; */
+    border: none;
+    border-bottom: 1px solid azure;
     background: transparent;
     color:azure;
     text-align: right;
@@ -78,6 +79,7 @@
 
 .select-cat {
     width: 310px;
+    border: none;
     /* font-size: 1.2rem; */
 }
 
@@ -86,11 +88,13 @@
     padding-left: 10px;
 
 }
-/* .inp-game {
-    margin-top: -15px;
+.inp-game {
+    /* margin-top: -15px;
     margin-right: 0;
-    margin-left: auto;
-} */
+    margin-left: auto; */
+    border: none;
+    border-bottom: 1px solid azure;
+}
 
 
 /* .inp-player {

@@ -1,0 +1,57 @@
+#results {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.res-win {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    color: #38FF12;
+    animation: glow-green 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow-green {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #a8fa97 0 0 40px #a8fa97, 0 0 50px #a8fa97, 0 0 60px #a8fa97, 0 0 70px #a8fa97  
+    }
+    
+    to {
+     text-shadow: 0 0 20px #fff, 0 0 30px #38FF12, 0 0 40px #38FF12, 0 0 50px #38FF12,0 0 60px #38FF12, 0 0 70px #38FF12, 0 0 80px #38FF12;
+    }
+  }
+
+.res-draw {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    color: azure;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.res-defeat {
+    color: #FF3131;
+    animation: glow-red 1s ease-in-out infinite alternate;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+@keyframes glow-red {
+    from {
+     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #f56b6b 0 0 40px #f56b6b, 0 0 50px #f56b6b, 0 0 60px #f56b6b, 0 0 70px #f56b6b  
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #FF3131, 0 0 40px #FF3131, 0 0 50px #FF3131,0 0 60px #FF3131, 0 0 70px #FF3131, 0 0 80px #FF3131;
+    }
+  }
+
+.res-row {
+    text-align: center;
+    color: azure;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}

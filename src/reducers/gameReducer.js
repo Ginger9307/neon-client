@@ -11,7 +11,9 @@ const initState = {
     finishQuiz: false,
     loading: false,
     admin: false,
-    playerScores: []
+    playerScores: [],
+    multiplayer: false,
+    // gameResult: ''
 };
 
 // shuffling array function 
@@ -20,6 +22,8 @@ const getShuffled = arr => {
     const rand = Math.floor(Math.random() * arr.length);
     return [arr[rand], ...getShuffled(arr.filter((_, i) => i != rand))];
 };
+// classes for answer buttons 
+const btnColors = ['btn-a-g', 'btn-a-p', 'btn-a-y', 'btn-a-o']
 
 const gameReducer = (state=initState, action) => {
     switch(action.type) {
@@ -30,14 +34,31 @@ const gameReducer = (state=initState, action) => {
         case 'LOAD_QUESTIONS': {
             console.log("state",state);
             console.log("payload",action.payload)
-            // create new key with all answers which shuffled
+            
+            // create new key with all answers which shuffled and class for btn
             const newQuestions = action.payload.map(a => {
                 console.log("a", a)
-                const answers = getShuffled([
+                // work out answers
+                const answers_pre = getShuffled([
                                     ...a.incorrect_answers,
                                     a.correct_answer,
                                 ]);
-                a["answers"] = answers;
+                // work out color for every answer
+                let btnColors = ['btn-answer btn-a-g', 'btn-answer btn-a-p', 'btn-answer btn-a-y', 'btn-answer btn-a-o', 'btn-answer btn-a-f', 'btn-answer btn-a-b']
+                const answers = answers_pre.map(a => {
+                    let obj = {};
+                    obj["answer"] = a;
+                    const index = Math.floor(Math.random() * (btnColors.length))
+                    console.log("index", index)
+                    const answColor = btnColors.splice(index, 1).toString();
+                    btnColors = btnColors.filter(c => c !== answColor)
+                    console.log(answColor, btnColors) ;
+                    obj["color"] = answColor;
+                    console.log(obj)
+                    return obj
+                })
+                console.log(answers);
+                a["answers"] = answers;               
                 return a;
             });
             console.log(newQuestions);
@@ -58,7 +79,10 @@ const gameReducer = (state=initState, action) => {
             return { ...state, room: action.payload.room, player: action.payload.name };
         }
         case 'RECORD_PLAYER_RESULT': {
-            return { ...state, playerScores: [...state.playerScores, { player: action.payload.playerName, score: action.payload.score }] };
+            return { ...state, playerScores: [...state.playerScores, { player: action.payload.playerName, score: action.payload.score }]};
+        }
+        case 'LOAD_GAME_MODE': {
+            return { ...state, multiplayer: true }
         }
         case 'SET_ERROR':
             return { ...state, error: action.payload, loading: false };
