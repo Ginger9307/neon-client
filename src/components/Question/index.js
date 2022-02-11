@@ -35,6 +35,7 @@ const Question = () => {
     const index = useSelector(state => state.index);
     const set = useSelector(state => state.questions[index]);
     const score = useSelector(state => state.score);
+    const player = useSelector(state => state.player);
     const question = set.question;
     const cAnswer = set.correct_answer;
     const answers = set.answers
@@ -45,7 +46,7 @@ const Question = () => {
         setTimer(initTimer);
         if (index === numQ-1) {
             console.log(score+curScore);  
-            dispatch(saveScore(score+curScore));
+            dispatch(saveScore(score+curScore, player));
             history.push('/results');
         };
     }
