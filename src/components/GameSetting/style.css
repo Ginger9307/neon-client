@@ -1,4 +1,105 @@
+#new-game {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
 .settings {
     color: azure;
-    
+    font-size: 1.5rem;
+    /* font-family: 'Moul', cursive !important; */
+    /* height: 400px; */
 }
+
+.settings label {
+    letter-spacing: 3px;
+}
+
+.settings .row {
+    margin-bottom: 30px;
+    padding: 10px;
+    align-items: center;
+    height: 55px;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.settings input, select {
+    border-radius: 5px;
+    /* border: 1px solid azure; */
+    border: none;
+    border-bottom: 1px solid azure;
+    background: transparent;
+    color:azure;
+    text-align: right;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.settings input[type='text'] {
+    /* margin-top: -15px; */
+    margin-right: 0;
+    margin-left: auto;
+    padding: 2px;
+    padding-right: 5px;
+}
+
+.numP-frame {
+    border: 2px solid #FFF100;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgb(255, 241, 0, 0.9);
+    justify-content: space-between;
+}
+.diff-frame {
+    border: 2px solid #ff00e3;
+    box-shadow: 0 0 25px rgb(255, 0, 227, 0.9);
+    border-radius: 25px;
+}
+
+.categ-frame {
+    border: 2px solid #38ff12;
+    box-shadow: 0 0 25px rgb(56, 255, 18, 0.9);
+    border-radius: 25px;
+}
+
+.room-frame {
+    border: 2px solid rgb(205, 105, 38);
+    box-shadow: 0 0 25px rgb(205, 105, 38, 0.9);
+    border-radius: 25px;
+}
+
+.player-frame {
+    border: 2px solid #bc75f9;
+    box-shadow: 0 0 25px rgb(188, 117, 249, 0.9);
+    border-radius: 25px;
+}
+
+.radio {
+    margin-right: 2px;
+}
+
+.select-cat {
+    width: 310px;
+    border: none;
+    /* font-size: 1.2rem; */
+}
+
+.inp-num {
+    text-align: left !important;
+    padding-left: 10px;
+
+}
+.inp-game {
+    /* margin-top: -15px;
+    margin-right: 0;
+    margin-left: auto; */
+    border: none;
+    border-bottom: 1px solid azure;
+}
+
+
+/* .inp-player {
+    margin-top: -15px;
+    margin-right: 0;
+    margin-left: auto;
+} */
+

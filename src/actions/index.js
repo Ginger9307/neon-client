@@ -26,6 +26,10 @@ export const loadPlayer = (room,name) => ({
     payload: { room, name }
 });
 
+export const loadGameMode = () => ({
+    type: 'LOAD_GAME_MODE'
+})
+
 // update score & increase index
 export const recordAnswer = (curScore) => ({
     type: 'RECORD_ANSWER',

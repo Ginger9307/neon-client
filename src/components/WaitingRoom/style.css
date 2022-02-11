@@ -1,0 +1,25 @@
+#waiting-room {
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    text-align: center;
+    font-family: 'Bubblegum Sans', cursive;
+    letter-spacing: 3px;
+}
+
+.wr-main {
+    height: 250px;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 3rem;
+    color: azure;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}

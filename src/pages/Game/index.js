@@ -26,9 +26,9 @@ const Game = () => {
 
   return (
     <div>
-        <h1>GAME</h1>
+        {/* <h1>GAME</h1> */}
         <Question />
-        <Nav1 links={['/menu', '/leaderboard']} /> 
+        {/* <Nav1 links={['/menu', '/leaderboard']} />  */}
     </div>);
 };
 

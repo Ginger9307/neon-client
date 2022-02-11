@@ -1,3 +1,138 @@
-h2, h3 {
+/* h2, h3 {
     color: azure;
+} */
+.question-main .title {
+    margin-top: 150px; 
+    margin-bottom: 20px; 
+    letter-spacing: 2px;
 }
+
+.question-main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+.timer {
+    color: azure;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Bubblegum Sans', cursive;
+    /* display: flex; */
+    /* width: 70px;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto; */
+}
+
+.q-frame{
+    /* background: rgb(230, 245, 245); */
+    background-color: rgb(230, 245, 245, 0.9);
+    color: #0b1d42;
+    border: 2px solid #0a1c3f;
+    box-shadow: 0 0 45px rgba(248, 249, 247, 0.8);
+    border-radius: 15px;
+    padding: 15px;
+    height: 130px;
+    margin-bottom: 40px;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.3rem;
+}
+
+/* .answer-frame {
+
+} */
+
+.btn-answer {
+    width: 152px;
+    height: 110px;
+    border-radius: 15px;
+    margin: 8px;
+    color: azure;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.btn-answer:hover {
+    cursor: pointer;
+}
+
+.btn-nav:active {
+    transform: scale(93%);
+}
+
+.cur-score {
+    color: azure;
+    font-size: 2rem;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+.btn-a-o {
+    border: 2px solid #FF822E;
+    background-color: rgb(255, 130, 46, 0.5);
+    box-shadow: 0 0 25px rgb(255, 130, 46, 0.9);
+}
+.btn-a-o:hover {
+    border: 2px solid #f5aa77;
+    background-color: rgb(255, 130, 46, 0.9);
+    box-shadow: 0 0 45px rgb(255, 130, 46, 0.9);
+}
+
+.btn-a-g {
+    border: 2px solid #38FF12;
+    background-color: rgb(56, 255, 18, 0.5);
+    box-shadow: 0 0 25px rgb(56, 255, 18, 0.9);
+}
+.btn-a-g:hover {
+    border: 2px solid #a2e98b;
+    background-color: rgb(56, 255, 18, 0.9);
+    box-shadow: 0 0 45px rgb(56, 255, 18, 0.9);
+}
+
+.btn-a-y {
+    border: 2px solid #FFF100;
+    background-color: rgb(255, 241, 0, 0.5);
+    box-shadow: 0 0 25px rgb(255, 241, 0, 0.9);
+}
+.btn-a-y:hover {
+    border: 2px solid #f5f199;
+    background-color: rgb(255, 241, 0, 0.9);
+    box-shadow: 0 0 45px rgb(255, 241, 0, 0.9);
+}
+
+.btn-a-p {
+    border: 2px solid  #BC75F9;
+    background-color: rgb(188, 117, 249, 0.5);
+    box-shadow: 0 0 25px rgb(188, 117, 249, 0.9);
+}
+.btn-a-p:hover {
+    border: 2px solid #c693f7;
+    background-color: rgb(188, 117, 249, 0.9);
+    box-shadow: 0 0 45px rgb(188, 117, 249, 0.9);
+}
+
+.btn-a-b {
+    border: 2px solid  #0492C2;
+    background-color: rgb(4, 146, 194, 0.5);
+    box-shadow: 0 0 25px rgb(4, 146, 194, 0.9);
+}
+.btn-a-b:hover {
+    border: 2px solid rgb(4, 146, 194);
+    background-color: rgb(4, 146, 194, 0.9);
+    box-shadow: 0 0 45px rgb(4, 146, 194, 0.9);
+}
+
+.btn-a-f {
+    border: 2px solid  #ff00e3;
+    background-color: rgb(255, 0, 227, 0.5);
+    box-shadow: 0 0 25px rgb(255, 0, 227, 0.9);
+}
+.btn-a-f:hover {
+    border: 2px solid #ff00e3;
+    background-color: rgb(255, 0, 227, 0.9);
+    box-shadow: 0 0 45px rgb(255, 0, 227, 0.9);
+}
+/* border: 2px solid #ff00e3;
+    box-shadow: 0 0 25px rgb(255, 0, 227, 0.9); */

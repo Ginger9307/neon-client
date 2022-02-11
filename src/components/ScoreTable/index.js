@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-
+import './style.css';
 
 const ScoreTable = () => {
 
@@ -10,8 +10,8 @@ const ScoreTable = () => {
   useEffect(() => {
     async function getLeaderBoard() {
         const response = await fetch ('http://neon-reactor.herokuapp.com/players',{
-        method: 'GET',
-        headers: {"Content-Type": "application/json"}});
+          method: 'GET',
+          headers: {"Content-Type": "application/json"}});
         let data = await response.json();
         setLeaderBoard(data)
         if (data.err) {
@@ -21,15 +21,19 @@ const ScoreTable = () => {
       getLeaderBoard();
   },[])
 
-  const renderLeaderBoard = () => leaderBoard.map(leadPlayer => <h3>{leadPlayer.username} scored:{leadPlayer.score}</h3>)
+  const renderLeaderBoard = () => leaderBoard.map(leadPlayer => <h3>{leadPlayer.username} scored : {leadPlayer.score}</h3>)
 
 
   return (
-    <div>
+    <div id='leaderboard'>
+      <div className='leaderboard'>
+          {renderLeaderBoard()}
 
+      </div>
       
-     
-        {renderLeaderBoard()}
+      <div className='nav'>
+          <a href='/menu' className='btn-nav btn-nav-l'>{'<< '}menu </a> 
+      </div>
     </div>
   );
 };

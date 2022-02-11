@@ -4,7 +4,7 @@ import Results from '../../components/Results';
 const GameOver = () => {
   return (
     <div>
-        <h1> RESULTS </h1>
+        <h1 className='glow'> GAME OVER </h1>
         <Results />
     </div>);
 };

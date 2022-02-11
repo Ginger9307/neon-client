@@ -7,3 +7,4 @@ export { default as WaitingRoom } from './WaitingRoom';
 export { default as WaitingRoomJoin } from './WaitingRoomJoin';
 export { default as Question} from './Question';
 export { default as RoomDetail} from './RoomDetail';
+export { default as Timer} from './Timer';

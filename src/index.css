@@ -11,10 +11,13 @@
     font-style: normal;
 }
   
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
-
-
-html {
+body {
   background: url(./style/blueBrickedWall.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -25,10 +28,45 @@ html {
 h1 {
   color: azure;
   font-family: 'HELLODENVERDISPLAYREGULARRg';
-  font-size: 96px;
+  font-size: 96px !important;
   letter-spacing: 25px;
+  /* margin-top: 120px !important; */
+  margin-top: 150px !important;
+  margin-bottom: 80px !important;
 }
 
+h2 {
+  color: azure;
+  font-size: 3rem !important;
+}
+
+h3 {
+  color: azure;
+  font-size: 2rem !important;
+}
+
+/* h1 {
+  margin-top: 150px !important;
+  margin-bottom: 80px !important;
+} */
+
+.glow {
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073; */
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00F5FB, 0 0 40px #00F5FB, 0 0 50px #00F5FB, 0 0 60px #00F5FB, 0 0 70px #00F5FB;  
+  }
+  
+  to {
+    /* text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6; */
+    text-shadow: 0 0 20px #fff, 0 0 30px #0492C2, 0 0 40px #0492C2, 0 0 50px #0492C2,0 0 60px #0492C2, 0 0 70px #0492C2, 0 0 80px #0492C2;
+  }
+}
 /* button { */
   /* background-color: transparent !important; */
   /* border: 3px solid azure;
@@ -37,8 +75,9 @@ h1 {
 } */
 
 a {
-  color: azure;
-  text-decoration: none;
-  font-family: 'Moul', cursive;
+  color: azure !important;
+  text-decoration: none !important;
+  font-family: 'Moul', cursive !important;
+  text-align: center;
 }
 
