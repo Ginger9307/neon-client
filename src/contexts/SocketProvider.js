@@ -11,7 +11,7 @@ export function SocketProvider({ children }) {
   const [socket, setSocket] = useState()
 
   useEffect(() => {
-    const newSocket = io('http://neon-reactor.herokuapp.com')
+    const newSocket = io('https://neon-reactor.herokuapp.com')
     setSocket(newSocket)
     return () => newSocket.close()
   }, [])
