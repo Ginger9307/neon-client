@@ -9,7 +9,7 @@ const ScoreTable = () => {
 
   useEffect(() => {
     async function getLeaderBoard() {
-        const response = await fetch ('http://neon-reactor.herokuapp.com/players',{
+        const response = await fetch ('https://neon-reactor.herokuapp.com/players',{
           method: 'GET',
           headers: {"Content-Type": "application/json"}});
         let data = await response.json();

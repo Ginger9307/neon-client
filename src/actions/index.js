@@ -90,13 +90,13 @@ const fetchQuestions = async (amount, category, difficulty) => {
 
 const postScore = async (score, player) => {
 
-    await fetch (`http://neon-reactor.herokuapp.com/players`, {
+    await fetch (`https://neon-reactor.herokuapp.com/players`, {
         method: 'POST',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({username: player})
     })
 
-   await fetch (`http://neon-reactor.herokuapp.com/players/${player}`, {
+   await fetch (`https://neon-reactor.herokuapp.com/players/${player}`, {
         method: 'PATCH',
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({score: score})
